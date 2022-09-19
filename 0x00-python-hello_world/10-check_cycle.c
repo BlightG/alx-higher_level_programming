@@ -1,0 +1,25 @@
+#include "lists.h"
+/**
+* check_cycle - a function that checks a 
+*                linked list for a cycle
+* @list: pointer to head of list
+* 
+*Return: 0 if there is no cycle
+*         1 if there is a cycle
+*/
+int check_cycle(listint_t *list)
+{
+        struct node *slow, *fast;
+        slow = fast = head;
+
+        while(slow && fast && fast->next) 
+        {
+        /* Slow pointer will move one node per iteration whereas 
+        fast node will move two nodes per iteration */
+                slow = slow->next;
+                fast  = fast->next->next;
+                if (slow == fast) 
+                        return (1);
+        }
+        return (0);
+}
