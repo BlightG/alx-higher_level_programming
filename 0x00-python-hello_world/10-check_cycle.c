@@ -9,8 +9,8 @@
 */
 int check_cycle(listint_t *list)
 {
-        struct node *slow, *fast;
-        slow = fast = head;
+        listint_t *slow, *fast;
+        slow = fast = list;
 
         while(slow && fast && fast->next) 
         {
