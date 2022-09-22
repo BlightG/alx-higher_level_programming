@@ -14,7 +14,7 @@ def main():
         print("{} arguments:".format(len(sys.argv)))
         while i <= len(sys.argv):
             print("{}: {}".format(i, sys.argv[i]))
-            i += i
+            i += 1 
 
 
 if __name__ == '__main__':
