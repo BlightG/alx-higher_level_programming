@@ -11,10 +11,10 @@ def main():
         print("0 arguments")
     elif len(sys.argv) > 2:
         i = 1
-        print("{} arguments:".format(len(sys.argv)))
-        while i <= len(sys.argv):
+        print("{} arguments:".format((len(sys.argv) - 1)))
+        while i < len(sys.argv):
             print("{}: {}".format(i, sys.argv[i]))
-            i += 1 
+            i += 1
 
 
 if __name__ == '__main__':
