@@ -37,9 +37,13 @@ void assigncomp(listint_t **head, int *compare)
 	listint_t *temp;
 
 	i = 0;
-	temp = *head;
-	if (head == NULL)
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL || head == NULL)
+	{
+		free(temp);
 		exit(0);
+	}
+	temp = *head;
 	while (temp != NULL)
 	{
 		compare[i] = temp->n;
