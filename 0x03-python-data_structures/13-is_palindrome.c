@@ -69,7 +69,7 @@ int is_palindrome(listint_t **head)
 	assigncomp(head, compare);
 	for (i = 0 ; i <= lenght / 2 ; i++)
 	{
-		if (compare[i] == compare[lenght - i])
+		if (compare[i] == compare[lenght - i - 1])
 			continue;
 		else
 			return (0);
