@@ -1,7 +1,10 @@
 #include "lists.h"
 /**
+ * count - counts the number of nodes
  *
+ * @head: a 2d pointer to head of a structure
  *
+ * Return: returns the number of noedes in a strucutre
 */
 int count(listint_t **head);
 int count(listint_t **head)
@@ -21,11 +24,14 @@ int count(listint_t **head)
 	return (count);
 }
 /**
+ * assigncomp - copies values of n from a stuct to int pointer
  *
+ * @head: double pointer to head of a stuct to be copied
+ * @compare: int pointer to store values from struct
  *
 */
-void assigncomp(listint_t **head, int* compare);
-void assigncomp(listint_t **head, int* compare)
+void assigncomp(listint_t **head, int *compare);
+void assigncomp(listint_t **head, int *compare)
 {
 	int i;
 	listint_t *temp;
@@ -42,15 +48,18 @@ void assigncomp(listint_t **head, int* compare)
 	}
 }
 /**
+ * is_palindrome -a function in C that checks if a singly linked
+ *                list is a palindrome.
  *
+ * @head: a pointer to head of the stuct
  *
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
 */
 int is_palindrome(listint_t **head)
 {
 	int i, lenght;
 	int *compare;
 
-	
 	lenght = count(head);
 	compare = malloc(sizeof(int) * lenght);
 	if (compare == NULL)
@@ -59,7 +68,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 	}
 	assigncomp(head, compare);
-	for (i = 0 ; i <= lenght/2 ; i++)
+	for (i = 0 ; i <= lenght / 2 ; i++)
 	{
 		if (compare[i] == compare[lenght - i])
 			continue;
