@@ -16,7 +16,7 @@ int count(listint_t **head)
 	count = 0;
 	if (head == NULL)
 		return (0);
-	while (temp->next != NULL)
+	while (temp != NULL)
 	{
 		count++;
 		temp = temp->next;
@@ -30,19 +30,13 @@ int count(listint_t **head)
  * @compare: int pointer to store values from struct
  *
 */
-void assigncomp(listint_t **head, int *compare);
-void assigncomp(listint_t **head, int *compare)
+void assigncomp(listint_t **head, char *compare);
+void assigncomp(listint_t **head, char *compare)
 {
 	int i;
 	listint_t *temp;
 
 	i = 0;
-	temp = malloc(sizeof(listint_t));
-	if (temp == NULL || head == NULL)
-	{
-		free(temp);
-		exit(0);
-	}
 	temp = *head;
 	while (temp != NULL)
 	{
@@ -50,6 +44,7 @@ void assigncomp(listint_t **head, int *compare)
 		temp = temp->next;
 		i++;
 	}
+	free(temp);
 }
 /**
  * is_palindrome -a function in C that checks if a singly linked
@@ -62,10 +57,10 @@ void assigncomp(listint_t **head, int *compare)
 int is_palindrome(listint_t **head)
 {
 	int i, lenght;
-	int *compare;
+	char *compare;
 
 	lenght = count(head);
-	compare = malloc(sizeof(int) * lenght);
+	compare = malloc(sizeof(char) * lenght);
 	if (compare == NULL)
 	{
 		free(compare);
