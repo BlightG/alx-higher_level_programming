@@ -12,32 +12,20 @@ class Square:
             else:
                 self.__size = size
         except TypeError as te:
-            print('size must be an integer', end="")
-            raise Exception
+            raise Exception('size must be an integer')
         except ValueError as ve:
-            print('size must be >= 0', end="")
-            raise Exception
-
+            raise Exception('size must be >= 0')
     def get_size(self):
         """ return size to user"""
-        size = self.__size
-        return size
+        return self.__size
 
-    def size(self, value):
+    def set_size(self, value):
         """ Set Size to value"""
-        try:
-            if value < 0:
-                raise ValueError
-            else:
-                self.__size = value
-        except TypeError as te:
-            print('size must be an integer', end="")
-            raise Exception
-        except ValueError as ve:
-            print('size must be >= 0', end="")
-            raise Exception
-    
+        Square.__init__(self, value)
+
     def area(self):
         """ Define area of a Square"""
         area = self.__size ** 2
         return area
+
+    size = property(get_size, set_size)
