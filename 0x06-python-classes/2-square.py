@@ -12,6 +12,6 @@ class Square:
             else:
                 self.__size = size
         except TypeError as te:
-            raise Exception ('size must be an integer')
+            raise Exception('size must be an integer')
         except ValueError as ve:
-            raise Exception ('size must be >= 0')
+            raise Exception('size must be >= 0')
