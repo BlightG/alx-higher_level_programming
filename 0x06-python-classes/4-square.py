@@ -15,6 +15,7 @@ class Square:
             raise Exception('size must be an integer')
         except ValueError as ve:
             raise Exception('size must be >= 0')
+
     def get_size(self):
         """ return size to user"""
         return self.__size
