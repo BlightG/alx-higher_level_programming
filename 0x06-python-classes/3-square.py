@@ -17,3 +17,8 @@ class Square:
         except ValueError as ve:
             print('size must be >= 0', end="")
             raise Exception
+
+    def area(self):
+        """ Define area of a Square"""
+        area = self.__size ** 2
+        return area
