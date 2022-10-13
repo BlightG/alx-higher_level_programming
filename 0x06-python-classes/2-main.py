@@ -27,7 +27,7 @@ except Exception as e:
     print(e)
 
 try:
-    my_square_4 = Square(-89)
+    my_square_4 = Square(3.14)
     print(type(my_square_4))
     print(my_square_4.__dict__)
 except Exception as e:

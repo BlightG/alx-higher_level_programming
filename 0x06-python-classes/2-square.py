@@ -9,6 +9,8 @@ class Square:
         try:
             if size < 0:
                 raise ValueError
+            elif type(size) == float:
+                raise TypeError
             else:
                 self.__size = size
         except TypeError as te:
