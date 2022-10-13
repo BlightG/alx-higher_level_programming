@@ -24,7 +24,7 @@ class Square:
 
         if not isinstance(a, int) or not isinstance(b, int):
             raise TypeError("position must be a tuple of 2 positive integers")
-            
+
         self.__position = position
 
     @property
