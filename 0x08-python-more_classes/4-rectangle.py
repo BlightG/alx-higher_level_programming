@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from cmath import rect
+""" Define a square """
 
 
 class Rectangle:

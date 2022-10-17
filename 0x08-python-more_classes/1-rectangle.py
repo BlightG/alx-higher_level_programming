@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Define a square """
+
 
 class Rectangle:
     """ a Class representing a rectangle """
