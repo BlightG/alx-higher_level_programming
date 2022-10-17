@@ -3,5 +3,5 @@
 
 
 class Rectangle:
-    """ a class defining a rectanlge"""
+    """ a class defining a rectanlge """
     
