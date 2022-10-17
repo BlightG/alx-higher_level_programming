@@ -4,7 +4,9 @@
 
 class Rectangle:
     """ a Class representing a rectangle """
+
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ an instantiation function"""
         if not isinstance(width, int):
