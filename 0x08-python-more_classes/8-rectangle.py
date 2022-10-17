@@ -98,6 +98,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """ checks area of two rectangles"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError('rect_1 must be an instance of Rectangle')
         elif not isinstance(rect_2, Rectangle):
@@ -109,12 +110,14 @@ class Rectangle:
                 return rect_1
 
     def __lt__(self, rect):
+        """ adds less than comparsion"""
         if self.area() < rect.area():
             return True
         else:
             return False
 
     def __eq__(self, rect):
+        """ adds equality comparison """
         if self.area == rect.area:
             return True
         else:
