@@ -94,3 +94,35 @@ class Rectangle:
         """ A magic function to delete a class"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ checks area of two rectangles"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        elif not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+        else:
+            if rect_1 < rect_2:
+                return rect_2
+            else:
+                return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        """ creting alternative class constructor """
+        return cls(size, size)
+
+    def __lt__(self, rect):
+        """ adds less than comparsion"""
+        if self.area() < rect.area():
+            return True
+        else:
+            return False
+
+    def __eq__(self, rect):
+        """ adds equality comparison """
+        if self.area == rect.area:
+            return True
+        else:
+            return False
