@@ -1,5 +1,5 @@
 #!/usr/bin/pyhton3
-""" Define a rectangle"""
+""" Define a rectangle """
 
 
 class Rectangle:
