@@ -2,12 +2,14 @@
 """ Define a square """
 
 
+from operator import truediv
+
+
 class Rectangle:
     """ a Class representing a rectangle """
 
     number_of_instances = 0
     print_symbol = '#'
-    
 
     def __init__(self, width=0, height=0):
         """ an instantiation function"""
@@ -67,11 +69,10 @@ class Rectangle:
     def area(self):
         """ a function that calculates the are of a rectangle"""
         return self.__width * self.__height
-    
+
     def print_symbol(self, value="#"):
         """ change the value of print_symbol """
         Rectangle.print_symbol = value
-
 
     def __str__(self):
         """ is string representation of a rectangle"""
@@ -82,7 +83,7 @@ class Rectangle:
                     for i in range(self.__height)]
             for i in range(self.__height):
                 for j in range(self.__width):
-                    rect[i][j] = str(Rectangle.print_symbol)
+                    rect[i][j] = str(self.print_symbol)
             string = "\n".join("".join(num for num in i) for i in rect)
             return string
 
@@ -94,3 +95,27 @@ class Rectangle:
         """ A magic function to delete a class"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        elif not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+        else:
+            if rect_1 < rect_2:
+                return rect_2
+            else:
+                return rect_1
+
+    def __lt__(self, rect):
+        if self.area() < rect.area():
+            return True
+        else:
+            return False
+
+    def __eq__(self, rect):
+        if self.area == rect.area:
+            return True
+        else:
+            return False
