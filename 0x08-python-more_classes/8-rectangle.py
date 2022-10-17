@@ -2,9 +2,6 @@
 """ Define a square """
 
 
-from operator import truediv
-
-
 class Rectangle:
     """ a Class representing a rectangle """
 
