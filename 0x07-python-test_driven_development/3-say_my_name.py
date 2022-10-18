@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ this is a very simple module that has one function
-to print a string and prior to printing it conacts some user 
+to print a string and prior to printing it conacts some user
 supplied  string to it
 """
 
@@ -11,7 +11,7 @@ def say_my_name(first_name, last_name=""):
         Args:
             first_name (str): first string, doesnnt have a deafault string
             last_name (str): second string, has an empty string as a default
-        
+
         Return:
             void
     """
