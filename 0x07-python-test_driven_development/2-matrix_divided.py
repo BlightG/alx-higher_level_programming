@@ -10,7 +10,7 @@ def matrix_divided(matrix, div):
     
     for i in range(len(newmatrix)):
         for j in range(len(newmatrix[i])):
-            newmatrix[i][j] = newmatrix[i][j] / div
+            newmatrix[i][j] = round(newmatrix[i][j] / div, 2)
 
 
     return newmatrix

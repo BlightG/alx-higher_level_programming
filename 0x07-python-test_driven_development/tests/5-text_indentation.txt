@@ -1,0 +1,16 @@
+"""
+>>> import sys
+>>> sys.path.append('../')
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation('hello .world')
+hello 
+<BLANKLINE>
+world
+>>> text_indentation(1)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation('1')
+1
+
+"""

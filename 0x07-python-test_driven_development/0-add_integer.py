@@ -5,9 +5,9 @@
    the value of float they will be typecasted to int
 '''
 def add_integer(a, b=98):
-    ''' add_integer (a, b)
+    """ add_integer (a, b)
         returns the sum of a and b
-    '''
+    """
     if not isinstance(a, (int, float)):
         raise TypeError ('a must be an integer')
         exit()
