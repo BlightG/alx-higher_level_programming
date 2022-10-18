@@ -24,7 +24,6 @@ class Rectangle:
         else:
             self.__height = height
 
-        Rectangle.print_symbol = '#'
         Rectangle.number_of_instances += 1
 
     @property
@@ -67,11 +66,6 @@ class Rectangle:
     def area(self):
         """ a function that calculates the are of a rectangle"""
         return self.__width * self.__height
-
-    @classmethod
-    def print_symbol(cls, value="#"):
-        """ change the value of print_symbol """
-        cls.print_symbol = value
 
     def __str__(self):
         """ is string representation of a rectangle """
