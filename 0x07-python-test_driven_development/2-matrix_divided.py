@@ -5,7 +5,7 @@ a 2d an user input int type variable
 
 
 def matrix_divided(matrix, div):
-    """ a function to divide each element of a matrix by an int
+    """ a function to divide each element of a matrix by an int ዶክ ቴስት
 
         Args:
             matix (2d-list): a list of list containing only int and float type
@@ -21,16 +21,16 @@ def matrix_divided(matrix, div):
         for i in matrix:
             if not isinstance(i, list):
                 raise TypeError('matrix must be a matrix (list of lists)\
-                                 of integers/floats')
+of integers/floats')
 
             elif lenght != len(i):
                 raise TypeError('Each row of the matrix must have \
-                                    the same size')
+the same size')
 
             for num in i:
                 if not isinstance(num, (int, float)):
                     raise TypeError('matrix must be a matrix (list of lists)\
-                                         of integers/floats')
+of integers/floats')
 
                 elif num == 0:
                     raise ZeroDivisionError('division by zero')
