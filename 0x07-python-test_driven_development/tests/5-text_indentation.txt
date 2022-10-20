@@ -3,7 +3,7 @@
 >>> sys.path.append('../')
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation('hello .world')
-hello 
+hello .
 <BLANKLINE>
 world
 >>> text_indentation(1)
