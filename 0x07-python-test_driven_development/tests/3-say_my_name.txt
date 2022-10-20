@@ -7,6 +7,6 @@ Traceback (most recent call last):
   ...
 TypeError: first_name must be a string
 >>> say_my_name("Bob", "white")
-my name is Bob white
+My name is Bob white
 
 """
