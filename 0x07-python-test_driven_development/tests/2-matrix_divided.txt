@@ -1,5 +1,6 @@
 """
 >>> import sys
+>>> from math import inf
 >>> sys.path.append('../')
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> matrix = [
@@ -8,6 +9,8 @@
 ... ]
 >>> print(matrix_divided(matrix, 3))
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> print(matrix_divided(matrix, float(inf)))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 >>> print(matrix_divided(matrix, "str"))
 Traceback (most recent call last):
     ...
