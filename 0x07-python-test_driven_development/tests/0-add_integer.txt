@@ -8,8 +8,10 @@
 98
 >>> print(add_integer(2))
 100
->>> print(add_integer(inf, -2))
-98
+>>> print(add_integer(float(inf), -2))
+89
+>>> print(add_integer(float(nan), -2))
+87
 >>> print(add_integer(4, "School"))
 Traceback (most recent call last):
     ...
