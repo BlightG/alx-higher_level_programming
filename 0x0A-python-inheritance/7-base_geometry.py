@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-""" started for base geometry"""
+""" started for base geometry
+"""
 
 
 class BaseGeometry:
-    """ Empty class base geomety"""
-    
+    """ Empty class base geomety
+    """
+
     def area(self):
-        """ a module not yet implemented """
+        """ a module not yet implemented
+        """
         raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        """ validates if @value is a postive int"""
+        """ validates if @value is a postive int
+        """
         if type(value) is not int:
             raise TypeError('{} must be an integer'.format(name))
         if value <= 0:
