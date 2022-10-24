@@ -12,7 +12,7 @@ class BaseGeometry:
         """ validates if @value is a postive int"""
         self.value = value
         self.name = name
-        if type(value)is not int:
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(self.name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(self.value))
