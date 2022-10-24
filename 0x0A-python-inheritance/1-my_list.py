@@ -4,17 +4,13 @@
 
 class MyList(list):
     "a class that inherits list object"
-    def __init__(self, my_list=[]):
-        """ initializes the object for Mylist"""
-        self.my_list = my_list
-        super().__init__(my_list)
-    
+
     def print_sorted(self):
+        """ a functioon to sort an int list"""
         maxlist = []
-        length = len(self.my_list)
-        print(length)
+        temp = self[:]
+        length = len(self)
         for i in range(length):
-            print(i)
-            maxlist.append(self.my_list.pop(max(self.my_list)))
-                
-        print(length)
+            maxlist.append(temp.pop(temp.index(min(temp))))
+
+        print(maxlist)
