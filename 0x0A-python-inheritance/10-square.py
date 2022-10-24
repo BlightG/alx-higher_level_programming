@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """ module containging class Square"""
-from turtle import width
-
-
 Rectangle = __import__('9-rectangle').Rectangle
 
 
