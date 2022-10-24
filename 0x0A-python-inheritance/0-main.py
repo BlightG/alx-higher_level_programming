@@ -11,4 +11,4 @@ class MyClass2(object):
 
 print(lookup(MyClass1))
 print(lookup(MyClass2))
-print(lookup(list))
+print(lookup(int))
