@@ -11,38 +11,44 @@ Usage
 =====
 
 
-We must first import the class
+======We must first import the class======
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry 
 
-We can intiate an instance from the imported class
+======We can intiate an instance from the imported class======
 >>> bg = BaseGeometry()
 
-we can use the method  integer validator to check if my_int is a postive integer
+======we can use the method  integer validator to check if my_int is a postive integer======
 >>> bg.integer_validator("my_int", 12)
 
-Passing a string to the integer_validator method and expecting a TypeError
+======Passing a string to the integer_validator method and expecting a TypeError======
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-Passing a 0 to the integer_validator method and expecting a ValueError
+======Passing a 0 to the integer_validator method and expecting a ValueError======
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
-Passing a negative integer to the integer_validator method and expecting a ValueError
+======Passing a negative integer to the integer_validator method and expecting a ValueError======
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
-Passing a negative integer to the integer_validator method and expecting a ValueError
+======Passing a negative integer to the integer_validator method and expecting a ValueError======
 >>> bg.integer_validator("name", 3.57)
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
+======if only one arument is given a Type error  will be raised=====
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+======If no argument is provided a TypeError is raised======
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
