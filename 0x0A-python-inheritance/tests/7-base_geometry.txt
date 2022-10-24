@@ -21,38 +21,44 @@ Usage
 >>> bg.integer_validator("my_int", 12)
 
 ======Passing a string to the integer_validator method and expecting a TypeError======
+
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
-    ...
 TypeError: name must be an integer
 
 ======Passing a 0 to the integer_validator method and expecting a ValueError======
+
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
-    ...
 ValueError: age must be greater than 0
 
 ======Passing a negative integer to the integer_validator method and expecting a ValueError======
+
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
 ======Passing a negative integer to the integer_validator method and expecting a ValueError======
+
 >>> bg.integer_validator("name", 3.57)
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
+
+=====if more than 2 arguments are given to TypeError is expected======
 
 >>> bg.integer_validator("my_int", 12, 50)
 Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 ======if only one arument is given a Type error  will be raised=====
+
 >>> bg.integer_validator("name")
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 ======If no argument is provided a TypeError is raised======
+
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
