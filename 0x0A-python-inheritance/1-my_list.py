@@ -9,7 +9,7 @@ class MyList(list):
         """ a functioon to sort an int list"""
         maxlist = []
         temp = self[:]
-        length = len(self)
+        length = len(temp)
         for i in range(length):
             maxlist.append(temp.pop(temp.index(min(temp))))
 
