@@ -7,12 +7,8 @@ class Square(Rectangle):
     """ a class that inherits from Rectangle"""
     def __init__(self, size):
         """ instansiation for objects of class """
-        try:
-            Rectangle.integer_validator(self, "size", size)
-            self.__size = size
-        except Exception as err:
-            print(err)
-
+        Rectangle.integer_validator(self, "size", size)
+        self.__size = size
         super().__init__(size, size)
 
     def area(self):
