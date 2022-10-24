@@ -11,11 +11,11 @@ TypeError: name must be an integer
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
-ValueError: 0 must be greater than 0
+ValueError: age must be greater than 0
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
     ...
-ValueError: -4 must be greater than 0
+ValueError: distance must be greater than 0
 >>> bg.integer_validator()
 Traceback (most recent call last):
     ...
