@@ -44,9 +44,7 @@ Traceback (most recent call last):
 TypeError: name must be an integer
 
 Passing one arugument to the method instead of the required 2
->>> bg.integer_validator("distance", )
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
 
 
 
