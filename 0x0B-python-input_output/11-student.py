@@ -22,6 +22,6 @@ class Student:
                     studentdict[student] = self.__dict__[student]
 
             return studentdict
-        
+
     def reload_from_json(self, json):
         self.__dict__ = json
