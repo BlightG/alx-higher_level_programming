@@ -16,7 +16,6 @@ def write_to_json():
     mylist = load_from_json_file('add_item.json')
     for i in range(1, len(sys.argv)):
         mylist.append(sys.argv[i])
-        print(mylist)
     save_to_json_file(mylist, 'add_item.json')
 
 
