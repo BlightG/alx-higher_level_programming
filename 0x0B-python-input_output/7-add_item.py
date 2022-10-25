@@ -10,7 +10,7 @@ def write_to_json():
     """ a function to write a to json """
     if not os.path.exists('add_item.json'):
         mylist = []
-        with open('add_item.json', 'w+', encoding='utf-8') as f:
+        with open('add_item.json', 'w+', encoding='utf-8'):
             save_to_json_file(mylist, 'add_item.json')
 
     mylist = load_from_json_file('add_item.json')
