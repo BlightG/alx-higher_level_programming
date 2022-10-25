@@ -10,5 +10,6 @@ def read_file(filename=""):
             filename: the name of the file
             with or without file path as a string
     """
-    with open(filename) as f:
-        f.read()
+    with open(filename, 'r', encoding="utf-8") as f:
+        for line in f:
+            print(line, end='')
