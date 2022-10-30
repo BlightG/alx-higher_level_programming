@@ -6,11 +6,11 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """ A square class with several attributes """
     def __init__(self, size, x=0, y=0, id=None):
-        """ an instansiation for rectanlge class 
+        """ an instansiation for rectanlge class
 
             Args:
-                width: an int type private instance attribute 
-                height: an int type private instance attribute 
+                width: an int type private instance attribute
+                height: an int type private instance attribute
                 x: an int type private instance attribute that defaults to 0
                 y: an int type private instance attribute that defaults to 0
                 id: an instance
@@ -19,7 +19,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """ A string prinitng the bject chractersitcs """
-        return "[Square] ({}) {}/{} - {}".format(\
+        return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, super().y, self.height)
 
     @property
@@ -48,7 +48,8 @@ class Square(Rectangle):
         else:
             for i in kwargs:
                 if i == "id":
-                    super().__init__(self.size, self.size, self.x, self.y, kwargs[i])
+                    super().__init__(
+                        self.size, self.size, self.x, self.y, kwargs[i])
                 elif i == "size":
                     self.width = kwargs[i]
                     self.height = kwargs[i]
@@ -59,6 +60,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """ returns a dictionary representation of the class Square """
-        return {'id': self.id, 'x':self.x, 'size':self.width, 'y':self.y}
-
-    
+        return {'id': self.id, 'x': self.x, 'size': self.width, 'y': self.y}

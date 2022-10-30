@@ -3,15 +3,14 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
     """ Rectangle class that has several attribute """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ an instansiation for rectanlge class 
+        """ an instansiation for rectanlge class
 
             Args:
-                width: an int type private instance attribute 
-                height: an int type private instance attribute 
+                width: an int type private instance attribute
+                height: an int type private instance attribute
                 x: an int type private instance attribute that defaults to 0
                 y: an int type private instance attribute that defaults to 0
                 id: an instance
@@ -106,7 +105,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ a string prinitng the bject chractersitcs """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(\
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
@@ -137,4 +136,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ returns a dictionary representation of the class Rectangle """
-        return {'x':self.__x, 'y':self.__y, 'id': self.id, 'height':self.__height,'width':self.__width }
+        return {'x': self.__x, 'y': self.__y, 'id': self.id, 
+                'height': self.__height,'width': self.__width }

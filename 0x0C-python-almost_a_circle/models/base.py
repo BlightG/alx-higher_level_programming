@@ -38,7 +38,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs=[]):
-        """that writes the JSON string representation 
+        """that writes the JSON string representation
             of list_objs to a file
         """
         with open("{}.json".format(cls.__name__), 'w', encoding="utf-8") as f:
@@ -58,7 +58,7 @@ class Base:
         str = '{}.json'.format(cls.__name__)
         if str:
             with open(str, 'r', encoding="utf-8") as f:
-                    newlist = cls.from_json_string(f.read())
-                    instlist = [cls.create(**i) for i in newlist]                    
-                    return instlist
+                newlist = cls.from_json_string(f.read())
+                instlist = [cls.create(i) for i in newlist]
+                return instlist
         return []
