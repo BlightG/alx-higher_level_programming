@@ -4,22 +4,24 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> print(add_integer(1, 2))
 3
+
+this is trial
 >>> print(add_integer(100, -2))
 98
 >>> print(add_integer(2))
 100
 >>> print(add_integer(float(inf), -2))
 Traceback (most recent call last):
-    ...
 NameError: name 'inf' is not defined
+
 >>> print(add_integer(float(nan), -2))
 Traceback (most recent call last):
     ...
 NameError: name 'nan' is not defined
 >>> print(add_integer(4, "School"))
 Traceback (most recent call last):
-    ...
 TypeError: b must be an integer
+
 >>> print(add_integer(None))
 Traceback (most recent call last):
     ...

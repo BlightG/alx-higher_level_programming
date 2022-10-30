@@ -16,4 +16,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_invalid_list(self):
         self.assertRaises(TypeError, max_integer, [1, 2, 3, 4, "str"])
-        self.assertRaises(TypeError, max_integer, [1, 2 + 1j, 3, 4])
+        self.assertRaises(TypeError, max_integer, [1, (2, 1), 3, 4])
