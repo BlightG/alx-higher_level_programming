@@ -34,7 +34,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """ converts a string representation to list """
-        return json.loads(json_string)
+        if json_string is None or len(json_string) == 0:
+            return json.loads(json_string)
+        return []
 
     @classmethod
     def save_to_file(cls, list_objs=[]):
@@ -49,6 +51,7 @@ class Base:
             with open(cls.__name__ + ".json", 'w', encoding="utf-8") as f:
                 newlist = [cls.to_dictionary(i) for i in list_objs]
                 f.write(cls.to_json_string(newlist))
+
     @classmethod
     def create(cls, **dictionary):
         ''' a class method to create an instance of the specified class '''
