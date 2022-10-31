@@ -41,10 +41,14 @@ class Base:
         """that writes the JSON string representation
             of list_objs to a file
         """
-        with open("{}.json".format(cls.__name__), 'w', encoding="utf-8") as f:
-            newlist = [cls.to_dictionary(i) for i in list_objs]
-            f.write(cls.to_json_string(newlist))
-
+        if list_objs is None or len(list_objs) == 0:
+            with open(cls.__name__ + ".json", 'w', encoding="utf-8") as f:
+                newlist = []
+                f.write(cls.to_json_string(newlist))
+        else:
+            with open(cls.__name__ + ".json", 'w', encoding="utf-8") as f:
+                newlist = [cls.to_dictionary(i) for i in list_objs]
+                f.write(cls.to_json_string(newlist))
     @classmethod
     def create(cls, **dictionary):
         ''' a class method to create an instance of the specified class '''
