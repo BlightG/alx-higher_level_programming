@@ -95,7 +95,7 @@ class Rectangle(Base):
             for k in range(self.__y):
                 print()
             for i in range(self.__height):
-                for  j in range(self.__x):
+                for j in range(self.__x):
                     rect[i][j] = " "
                 for j in range(self.__x, self.__x + self.__width):
                     rect[i][j] = '#'
@@ -136,5 +136,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ returns a dictionary representation of the class Rectangle """
-        return {'x': self.__x, 'y': self.__y, 'id': self.id, 
-                'height': self.__height,'width': self.__width }
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
