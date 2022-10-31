@@ -27,9 +27,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ convertes list of dictionary to json string representation """
-        if list_dictionaries:
-            return json.dumps(list_dictionaries)
-        return None
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return str([])
+        return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
