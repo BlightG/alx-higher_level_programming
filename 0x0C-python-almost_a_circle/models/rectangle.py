@@ -1,4 +1,4 @@
-#!/ur/bin/python3
+#!/usr/bin/python3
 """ a Module for Rectanlge class that inherits from Base """
 from models.base import Base
 
