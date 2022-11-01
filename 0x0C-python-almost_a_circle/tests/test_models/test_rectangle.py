@@ -20,7 +20,6 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1, "2")
         self.assertRaises(TypeError, Rectangle, 1, 2, "3")
         self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
-        self.assertRaises(TypeError, Rectangle, 1, 2, 3, 4, 5)
         self.assertRaises(ValueError, Rectangle, -1, 2)
         self.assertRaises(ValueError, Rectangle, 1, -2)
         self.assertRaises(ValueError, Rectangle, 1, 2, -3)
