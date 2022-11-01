@@ -9,9 +9,9 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_Equal(self):
         """ Checks sucesses case of Base class """
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.id, 3)
         r2 = Rectangle(10, 2, 0, 0, 12)
-        dict = {'x': 0, 'y': 0, 'id': 1, 'height': 2, 'width': 10}
+        dict = {'x': 0, 'y': 0, 'id': 3, 'height': 2, 'width': 10}
         self.assertEqual(r1.to_dictionary(), dict)
 
     def test_rectangle_Exception(self):
