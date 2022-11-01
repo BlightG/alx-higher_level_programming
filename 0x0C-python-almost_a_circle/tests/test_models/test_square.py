@@ -10,7 +10,7 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_Equal(self):
         """ Checks sucesses case of Base class """
         s1 = Square(10, 2)
-        self.assertEqual(s1.id, 4)
+        self.assertEqual(s1.id, 5)
         s2 = Square(10, 2, 0, 12)
         dict = {'x': 2, 'y': 0, 'id': 12, 'size': 10}
         self.assertEqual(s2.to_dictionary(), dict)
