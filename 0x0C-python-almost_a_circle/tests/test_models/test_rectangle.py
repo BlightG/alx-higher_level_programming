@@ -13,6 +13,8 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(1, 2, 3, 4)
         dict = {'x': 3, 'y': 4, 'id': 4, 'height': 2, 'width': 1}
         self.assertEqual(r2.to_dictionary(), dict)
+        r3 = Rectangle(1, 2, 3)
+        self.assertEqual(r3.id, 5)
 
     def test_rectangle_Exception(self):
         """ Checks the Exceptions for Rectangle """
