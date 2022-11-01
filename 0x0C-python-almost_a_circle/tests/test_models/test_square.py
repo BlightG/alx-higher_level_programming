@@ -11,8 +11,8 @@ class TestRectangle(unittest.TestCase):
         """ Checks sucesses case of Base class """
         r1 = Square(10, 2)
         self.assertEqual(r1.id, 1)
-        r2 = Square(10, 2, 0, 0, 12)
-        dict = {'x': 0, 'y': 0, 'id': 1, 'height': 2, 'width': 10}
+        r2 = Square(10, 2, 0, 12)
+        dict = {'x': 0, 'y': 0, 'id': 1, 'size': 2}
         self.assertEqual(r1.to_dictionary(), dict)
 
     def test_square_Exception(self):
