@@ -16,7 +16,15 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_Exception(self):
         """ Checks the Exceptions for Rectangle """
-        self.assertRaises(TypeError, Rectangle, "1", "2", "3", "4")
-        self.assertRaises(ValueError, Rectangle, 10, -2)
-        self.assertRaises(ValueError, Rectangle, 0, -2)
+        self.assertRaises(TypeError, Rectangle, "1", 2)
+        self.assertRaises(TypeError, Rectangle, 1, "2")
+        self.assertRaises(TypeError, Rectangle, 1, 2, "3")
+        self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
+        self.assertRaises(TypeError, Rectangle, 1, 2, 3, 4, 5)
+        self.assertRaises(ValueError, Rectangle, -1, 2)
+        self.assertRaises(ValueError, Rectangle, 1, -2)
+        self.assertRaises(ValueError, Rectangle, 1, 2, -3)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
+        self.assertRaises(ValueError, Rectangle, 0, 2)
+        self.assertRaises(ValueError, Rectangle, 2, 0)
         self.assertRaises(ValueError, Rectangle, 10, 2, -3, -4)
