@@ -4,6 +4,7 @@
     in this project. The goal of it is to manage id attribute
     in all your future classes and to avoid duplicating the same code
 """
+import csv
 import json
 import os
 
@@ -78,3 +79,38 @@ class Base:
                     instlist.append(cls.create(**i))
                 return instlist
         return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """that writes the JSON string representation
+            of list_objs to a file
+        """
+        str = '{}.csv'.format(cls.__name__)
+        with open(str, 'w', encoding="utf-8") as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ['x', 'y', 'id', 'height', 'width']
+            elif cls.__name__ == "Square":
+                fieldnames = ['id', 'x', 'size', 'y']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for i in list_objs:
+                writer.writerow(cls.to_dictionary(i))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ A cls method that returns a list of instances """
+        str = '{}.csv'.format(cls.__name__)
+        if os.path.exists(str):
+            with open(str, 'r', encoding="utf-8") as f:
+                newlist = csv.DictReader(f)
+                newlist = cls.convert_to_int(newlist)
+                instlist = []
+                for i in newlist:
+                    instlist.append(cls.create(**i))
+                return instlist
+        return []
+
+    @staticmethod
+    def convert_to_int(lst):
+        result = [dict([a, int(x)] for a, x in b.items()) for b in lst]
+        return result
