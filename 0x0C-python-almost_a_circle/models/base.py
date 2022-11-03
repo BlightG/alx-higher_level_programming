@@ -56,9 +56,14 @@ class Base:
     def create(cls, **dictionary):
         ''' a class method to create an instance of the specified class '''
         if dictionary is not None:
-            dummy = cls(1, 1)
-            dummy.update(**dictionary)
-            return dummy
+            if cls.__name__ == "Rectangle":
+                dummy = cls(1, 1)
+                dummy.update(**dictionary)
+                return dummy
+            else:
+                dummy = cls(1, 0)
+                dummy.update(**dictionary)
+                return dummy
 
     @classmethod
     def load_from_file(cls):
