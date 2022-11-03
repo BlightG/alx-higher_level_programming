@@ -72,6 +72,9 @@ class Base:
         if str:
             with open(str, 'r', encoding="utf-8") as f:
                 newlist = cls.from_json_string(f.read())
-                instlist = [cls.create(i) for i in newlist]
+                instlist = []
+                for i in newlist:
+                    instlist.append(cls.create(**i))
+                print(instlist)
                 return instlist
         return []
