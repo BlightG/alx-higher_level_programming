@@ -75,6 +75,5 @@ class Base:
                 instlist = []
                 for i in newlist:
                     instlist.append(cls.create(**i))
-                print(instlist)
                 return instlist
         return []
