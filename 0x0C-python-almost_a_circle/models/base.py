@@ -5,6 +5,7 @@
     in all your future classes and to avoid duplicating the same code
 """
 import json
+import os
 
 
 class Base:
@@ -69,7 +70,7 @@ class Base:
     def load_from_file(cls):
         """ A cls method that returns a list of instances """
         str = '{}.json'.format(cls.__name__)
-        if str:
+        if os.path.exists(str):
             with open(str, 'r', encoding="utf-8") as f:
                 newlist = cls.from_json_string(f.read())
                 instlist = []
