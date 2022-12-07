@@ -2,9 +2,10 @@
 >>> import sys
 >>> sys.path.append('../')
 >>> add_integer = __import__('0-add_integer').add_integer
->>> print(add_integer(1, 2))
+>>> add_integer(1, 2)
 3
 
+3
 this is trial
 >>> print(add_integer(100, -2))
 98
@@ -23,6 +24,10 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 
 >>> print(add_integer(None))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer("as")
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
