@@ -1,11 +1,12 @@
 #!/usr/bin/node
-const { argv } = require("process");
+const { argv } = require('process');
 
 let num = parseInt(argv[2], 10);
 if (!isNaN(num)) {
   for (let i = 0; i < num; i++) {
-    console.log("c is fun");
+    console.log('c is fun');
   }
 } else {
-  console.log("Missing number of occurrences");
+  console.log('Missing number of occurrences');
 }
+

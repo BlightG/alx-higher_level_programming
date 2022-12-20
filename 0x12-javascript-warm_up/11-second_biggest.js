@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require("process");
+const { argv } = require('process');
 
 function second_max(argv) {
   let list_num = argv.length;
@@ -17,9 +17,10 @@ function second_max(argv) {
   return second_max;
 }
 if (argv[2] == null) {
-  console.log("0");
+  console.log('0');
 } else if (argv[3] == null) {
-  console.log("0");
+  console.log('0');
 } else {
   console.log(second_max(argv));
 }
+

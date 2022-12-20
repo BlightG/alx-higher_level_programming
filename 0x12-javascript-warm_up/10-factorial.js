@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require("process");
+const { argv } = require('process');
 
 let num = parseInt(argv[2], 10);
 
@@ -12,4 +12,5 @@ function factorial(num) {
 
 if (!isNaN(num)) {
   console.log(factorial(num));
-} else console.log("1");
+} else console.log('1');
+
