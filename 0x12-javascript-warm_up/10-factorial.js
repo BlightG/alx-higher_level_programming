@@ -13,4 +13,3 @@ function factorial(num) {
 if (!isNaN(num)) {
   console.log(factorial(num));
 } else console.log('1');
-

@@ -9,4 +9,3 @@ if (!isNaN(num)) {
 } else {
   console.log('Missing number of occurrences');
 }
-
