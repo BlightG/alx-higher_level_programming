@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-let num = parseInt(argv[2], 10);
+const num = parseInt(argv[2], 10);
 
-function factorial(num) {
+function factorial (num) {
   if (num > 1) {
     return num * factorial(num - 1);
   }
