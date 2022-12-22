@@ -9,4 +9,4 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
-        print("{},".format(row))
+        print("{}".format(row))
