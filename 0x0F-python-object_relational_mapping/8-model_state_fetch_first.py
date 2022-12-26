@@ -5,7 +5,7 @@ import sys
 from sqlalchemy.sql import select
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 
 
 if __name__ == "__main__" and len(sys.argv) == 4:
@@ -17,4 +17,4 @@ if __name__ == "__main__" and len(sys.argv) == 4:
     session = Session()
 
     state = session.query(State).order_by(State.id).first()
-    print("Nothing" if not state else state)
+    print(f"{state.id}: {state.name}")
