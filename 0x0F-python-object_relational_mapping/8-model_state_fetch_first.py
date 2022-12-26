@@ -14,6 +14,5 @@ if __name__ == "__main__" and len(sys.argv) == 4:
     Base.metadata.create_all(engine)
     con = engine.connect()
     s = select([State]).where(State.id == '1')
-    result = con.execute(s)
-    for row in result:
+    for row in con.execute(s):
         print(f"{row[0]}: {row[1]}")
