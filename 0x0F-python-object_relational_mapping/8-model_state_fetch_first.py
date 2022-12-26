@@ -19,3 +19,5 @@ if __name__ == "__main__" and len(sys.argv) == 4:
     state = session.query(State).order_by(State.id).first()
     if state:
         print(f"{state.id}: {state.name}")
+    else:
+        print("Nothing")
