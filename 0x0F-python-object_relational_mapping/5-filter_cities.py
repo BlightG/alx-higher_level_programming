@@ -18,3 +18,5 @@ if __name__ == "__main__" and len(argv) == 5:
         i += 1
         if i != len(rows):
             print(", ", end="")
+    else:
+        print("")
