@@ -9,8 +9,8 @@ if __name__ == "__main__" and len(argv) == 5:
     cur.execute("SELECT cities.name FROM cities LEFT JOIN states ON\
                  cities.state_id = states.id\
                  WHERE states.id = (SELECT states.id FROM states\
-                 WHERE states.name = 'texas')\
-                 ORDER BY cities.id ASC;")
+                 WHERE states.name = %s)\
+                 ORDER BY cities.id ASC;", (argv[4], ))
     rows = cur.fetchall()
     i = 0  # counts no of rows printed to adjust the comma separetor
     for row in rows:
