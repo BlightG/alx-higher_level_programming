@@ -15,8 +15,10 @@ if __name__ == "__main__" and len(sys.argv) == 5:
     con = engine.connect()
     s = select([State]).where(State.name == (sys.argv[4])).order_by(State.id)
     result = con.execute(s)
-    if result:
-        for row in result:
-            print(f"{row[0]}")
-    else:
+    # try if result is found or not
+    try:
+        if result.id:
+            for row in result:
+                print(row.id)
+    except AttributeError:
         print("Not found")
