@@ -1,17 +1,34 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
+'''Script to list all State objects that contain the
+letter a from the database hbtn_0e_6_usa'''
+
+
 import sys
-from sqlalchemy.sql import select
 from model_state import Base, State
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-if __name__ == "__main__" and len(sys.argv) == 4:
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+if __name__ == "__main__":
+    if len(sys.argv) > 3:
+        user_name = sys.argv[1]
+        passwd = sys.argv[2]
+        db_name = sys.argv[3]
 
-    query = "INSERT INTO  `hbtn_0e_6_usa`.`states` (`name`) VALUES(%s)"
-    id = engine.execute(query, 'Louisiana')
+        engine = create_engine(f"mysql+mysqldb:\
+//{user_name}:{passwd}@localhost:3306/{db_name}")
+
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        Loui = State(name="Louisiana")
+        session.add(Loui)
+        session.commit()
+
+        state = session.query(State).order_by(State.id)\
+                                    .filter(State.name == "Louisiana").first()
+
+        print("Not found" if not state else state.id)
+    else:
+        print(f"Usage: ./11-model_state_insert.py \
+        <mysql_username> <mysql_password> <database_name>")
