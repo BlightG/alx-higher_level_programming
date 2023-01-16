@@ -51,8 +51,18 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - All **curl** commands must have the option **-s** (silent mode)
 - All your files will be interpreted/compiled on Ubuntu 20.04 LTS using **python3** (version 3.8.5)
 - The first line of all your Python files should be exactly **#!/usr/bin/python3**
-- Your code should use the pycodestyle (version **2.8.\***)
+- Your code should use the pycodestyle (version **2.8.\**)
 - All your modules should be documented: **python3 -c 'print(__import__("my_module").__doc__)'**
 - All your classes should be documented: **python3 -c 'print(__import__("my_module").MyClass.__doc__)'**
 - All your functions (inside and outside a class) should be documented: **python3 -c 'print(__import__("my_module").my_function.__doc__)'** and **python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'**
-A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+## Tasks
+
+#### 0. cURL body size
+
+Write a Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
+
+- The size must be displayed in bytes
+- You have to use **curl**
+Please test your script in the sandbox provided, using the web server running on port 5000
