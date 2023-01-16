@@ -1,15 +1,31 @@
 #!/usr/bin/python3
-"""module to fin peak from list of int """
+'''Python script to find the peak in a 
+list of unordered integers'''
 
 
 def find_peak(list_of_integers):
-    """a funtion to find max number"""
-    if len(list_of_integers) == 0:
+    '''Function to find the peak in the passed list of 
+    unordered integers'''
+
+    if list_of_integers is None or list_of_integers == []:
         return None
 
-    peak = list_of_integers[0]
-    for i in list_of_integers:
-        if peak < i:
-            peak = i
+    low = 0
+    high = len(list_of_integers)
+    mid = ((high - low) // 2) + low
 
-    return peak
+    if high == 1:
+        return list_of_integers[0]
+
+    if high == 2:
+        return max(list_of_integers)
+
+    if list_of_integers[mid] >= list_of_integers[mid - 1] and\
+            list_of_integers[mid] >= list_of_integers[mid + 1]:
+        return list_of_integers[mid]
+
+    if mid > 0 and list_of_integers[mid] < list_of_integers[mid + 1]:
+        return find_peak(list_of_integers[mid:])
+
+    if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
+        return find_peak(list_of_integers[:mid])
