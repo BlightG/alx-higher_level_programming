@@ -1,3 +1,3 @@
 #!/bin/bash
 # list all options from server
-curl -s "$1" -X OPTIONS 
+curl -sI $1 | grep "Allow" | cut -d " " -f 2-
