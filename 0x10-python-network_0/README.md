@@ -79,3 +79,9 @@ Write a Bash script that takes in a URL, sends a GET request to the URL, and dis
 Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
 
 - You have to use **curl**
+
+#### 3. cURL only methods
+
+Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
+
+- You have to use curl
