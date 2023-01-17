@@ -2,7 +2,7 @@
 """ send a post to url and print reply """
 import sys
 import urllib.request
-import urllib.parse
+# import urllib.parse
 
 
 values = {'email': sys.argv[2]}
@@ -11,4 +11,4 @@ data = data.encode('ascii')
 req = urllib.request.Request(sys.argv[1], data)
 with urllib.request.urlopen(req) as responses:
     response = responeses.read()
-    print(response)
+    print(f'your email is: {response.decode("utf8")}')
