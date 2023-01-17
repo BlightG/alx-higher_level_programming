@@ -5,6 +5,5 @@ import requests
 
 
 if __name__ == '__main__':
-    with requests.get(sys.argv[1]) as response:
-        header = response.headers
-        print(header['X-Request-Id'])
+    response = requests.get(sys.argv[1])
+    print(res.header.get('X-Request-Id'))
