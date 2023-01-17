@@ -12,4 +12,4 @@ if __name__ == '__main__':
     req = urllib.request.Request(sys.argv[1], data)
     with urllib.request.urlopen(req) as responses:
         response = responeses.read()
-        print(f'your email is: {response.decode("utf8")}')
+        print(f'Your email is: {response.decode("utf8")}')
