@@ -4,6 +4,11 @@ const request = require('request');
 const { argv } = require('process');
 
 let count = 0;
+const str = 'https://swapi-api.alx-tools.com/api/films';
+
+if (argv[2] !== str) {
+   throw new Error('usage:./4-starwars_count.js https://swapi-api.alx-tools.com/api/films');
+}
 
 request(argv[2], (error, response, body) => {
   if (error) console.log(error);
