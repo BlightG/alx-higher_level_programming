@@ -9,15 +9,15 @@ request(argv[2], (error, response, body) => {
   if (error) console.log(error);
   // console.log(response.statusCode);
   const jsondict = JSON.parse(body);
-  for (let i = 0; i < jsondict['results'].length; i++) {
+  for (let i = 0; i < jsondict.results.length; i++) {
     // console.log(jsondict['results'][i]);
-    for (let j = 0; j < jsondict['results'][i]['characters'].length; j++) {
-       // console.log(typeof jsondict['results'][i]['characters'][j]);
-       if (jsondict['results'][i]['characters'][j] ==
+    for (let j = 0; j < jsondict.results[i].characters.length; j++) {
+      // console.log(typeof jsondict['results'][i]['characters'][j]);
+      if (jsondict.results[i].characters[j] ===
              'https://swapi-api.alx-tools.com/api/people/18/') {
-         count += 1;
+        count += 1;
+      }
     }
   }
-}
-console.log(count)
+  console.log(count);
 });
